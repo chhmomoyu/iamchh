@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>作品集 · iamchh</title>
+  <meta name="description" content="iamchh 的个人网站示意原型。游戏前端 / Cocos，也在搜索 AI 辅助开发。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="has-tabbar">
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html">iamchh</a>
+      <nav class="nav-desktop" aria-label="主导航">
+        <a href="works.html" class="is-active">作品集</a>
+        <a href="blog.html">博客</a>
+        <a href="collection.html">收藏</a>
+        <a href="about.html">关于我</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <div class="drawer" id="mobile-drawer" aria-hidden="true">
+    <nav aria-label="移动菜单">
+      <a href="index.html">首页</a>
+      <a href="works.html" class="is-active">作品集</a>
+      <a href="blog.html">博客</a>
+      <a href="collection.html">收藏</a>
+      <a href="about.html">关于我</a>
+    </nav>
+  </div>
+  <main id="main">
+    <header class="page-head wrap">
+      <h1>作品集</h1>
+      <p class="sub">游戏界面、工具与练习相关的示意项目</p>
+    </header>
+    <div class="wrap">
+      <div class="filters" data-target=".works-grid .work-card" role="group" aria-label="按类型筛选作品">
+        <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">全部</button>
+        <button class="filter-btn" type="button" data-filter="game" aria-pressed="false">游戏前端</button>
+        <button class="filter-btn" type="button" data-filter="ai" aria-pressed="false">AI 辅助开发</button>
+        <button class="filter-btn" type="button" data-filter="practice" aria-pressed="false">练习</button>
+      </div>
+      <div class="works-grid">
+        <a class="work-card" href="work.html?id=hud" data-cat="game">
+          <div class="work-card__media">
+            <img src="assets/hud.png" alt="深色科幻风战斗界面示意，圆形仪表与金色刻度" width="800" height="500">
+            <span class="badge">示意</span>
+          </div>
+          <div class="work-card__body">
+            <span class="work-card__cat">游戏前端</span>
+            <h3>小游戏界面</h3>
+            <p class="work-card__sub">战斗状态与血条设计</p>
+            <p class="work-card__desc">战斗状态、血条与关键数值的界面示意。</p>
+            <span class="text-link work-card__go">查看项目 <span class="arrow">→</span></span>
+          </div>
+        </a>
+        <a class="work-card" href="work.html?id=editor" data-cat="game">
+          <div class="work-card__media">
+            <img src="assets/editor.png" alt="深色编辑器小窗口示意，左侧代码与右侧工具栏" width="800" height="500">
+            <span class="badge">示意</span>
+          </div>
+          <div class="work-card__body">
+            <span class="work-card__cat">游戏前端</span>
+            <h3>工具小窗口</h3>
+            <p class="work-card__sub">编辑器工具与参数面板</p>
+            <p class="work-card__desc">编辑器小窗口与参数面板的排布示意。</p>
+            <span class="text-link work-card__go">查看项目 <span class="arrow">→</span></span>
+          </div>
+        </a>
+        <a class="work-card" href="work.html?id=practice" data-cat="practice">
+          <div class="work-card__media">
+            <img src="assets/grid.png" alt="深色网格练习页示意，节点与金色锚点分布在格子上" width="800" height="500">
+            <span class="badge">示意</span>
+          </div>
+          <div class="work-card__body">
+            <span class="work-card__cat">练习</span>
+            <h3>练习页面</h3>
+            <p class="work-card__sub">参数调试与动效练习</p>
+            <p class="work-card__desc">用于参数调试和动效试验的网格练习页。</p>
+            <span class="text-link work-card__go">查看项目 <span class="arrow">→</span></span>
+          </div>
+        </a>
+        <a class="work-card" href="work.html?id=toolchain" data-cat="game">
+          <div class="work-card__media">
+            <img src="assets/nodes.png" alt="节点连线示意图，表示工具链中的多个处理步骤" width="800" height="500">
+            <span class="badge">示意</span>
+          </div>
+          <div class="work-card__body">
+            <span class="work-card__cat">游戏前端</span>
+            <h3>Cocos Creator 3D 引擎工具链</h3>
+            <p class="work-card__sub">性能分析、可视化调试、构建优化工具集</p>
+            <p class="work-card__desc">性能分析、可视化调试、构建优化工具集。</p>
+            <span class="text-link work-card__go">查看项目 <span class="arrow">→</span></span>
+          </div>
+        </a>
+        <a class="work-card" href="work.html?id=codegen" data-cat="ai">
+          <div class="work-card__media">
+            <img src="assets/code.png" alt="深色代码编辑画面示意，高亮一行与生成 UI 相关的调用" width="800" height="500">
+            <span class="badge">示意</span>
+          </div>
+          <div class="work-card__body">
+            <span class="work-card__cat">AI 辅助开发</span>
+            <h3>Prompt 驱动的 UI 代码生成器</h3>
+            <p class="work-card__sub">从自然语言到 Cocos TS + UI 组件</p>
+            <p class="work-card__desc">从自然语言到 Cocos TS + UI 组件。</p>
+            <span class="text-link work-card__go">查看项目 <span class="arrow">→</span></span>
+          </div>
+        </a>
+        <a class="work-card" href="work.html?id=shader" data-cat="game">
+          <div class="work-card__media">
+            <img src="assets/shader.png" alt="金色与橙色粒子迸发的抽象特效示意" width="800" height="500">
+            <span class="badge">示意</span>
+          </div>
+          <div class="work-card__body">
+            <span class="work-card__cat">游戏前端</span>
+            <h3>Shader 效果库与编辑器插件</h3>
+            <p class="work-card__sub">粒子特效、溶解、描边、后处理集合</p>
+            <p class="work-card__desc">粒子特效、溶解、描边、后处理集合。</p>
+            <span class="text-link work-card__go">查看项目 <span class="arrow">→</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>iamchh · 界面示意原型</span>
+      <span>内容与项目均为占位，不代表已发布作品</span>
+    </div>
+  </footer>
+  <nav class="tabbar" aria-label="底部导航">
+    <a href="works.html" class="is-active"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.2"/></svg>作品集</a>
+    <a href="blog.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h7.2L20.5 9.8V20.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5z"/><path d="M14 3.5V9h6"/></svg>博客</a>
+    <a href="collection.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19.2S4.4 14.1 4.4 9.7A3.7 3.7 0 0 1 12 8.1a3.7 3.7 0 0 1 7.6 1.6C19.6 14.1 12 19.2 12 19.2z"/></svg>收藏</a>
+    <a href="about.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.2" r="3.1"/><path d="M5.6 19.2c.7-3.2 3.2-5 6.4-5s5.7 1.8 6.4 5"/></svg>关于我</a>
+  </nav>
+  <script src="js/site.js"></script>
+</body>
+</html>

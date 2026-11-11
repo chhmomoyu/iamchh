@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>关于 · iamchh</title>
+  <meta name="description" content="iamchh 的个人网站示意原型。游戏前端 / Cocos，也在搜索 AI 辅助开发。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="has-tabbar">
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html">iamchh</a>
+      <nav class="nav-desktop" aria-label="主导航">
+        <a href="works.html">作品集</a>
+        <a href="blog.html">博客</a>
+        <a href="collection.html">收藏</a>
+        <a href="about.html" class="is-active">关于我</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <div class="drawer" id="mobile-drawer" aria-hidden="true">
+    <nav aria-label="移动菜单">
+      <a href="index.html">首页</a>
+      <a href="works.html">作品集</a>
+      <a href="blog.html">博客</a>
+      <a href="collection.html">收藏</a>
+      <a href="about.html" class="is-active">关于我</a>
+    </nav>
+  </div>
+  <main id="main">
+    <header class="page-head wrap">
+      <h1>关于</h1>
+    </header>
+    <div class="wrap">
+      <div class="about">
+        <p class="intro">站点对外只用品牌名 iamchh。主要做游戏前端，日常和 Cocos 打交道，也在搜索把 AI 真正嵌进开发与验收里的方法。</p>
+        <section class="about-block">
+          <h2>角色</h2>
+          <p>游戏前端 / Cocos</p>
+          <p>同时在探索 AI 辅助开发</p>
+        </section>
+        <section class="about-block">
+          <h2>在做的事</h2>
+          <ul>
+            <li>游戏界面、战斗状态与表现相关的前端工作</li>
+            <li>编辑器工具、参数面板和调试向的小工具</li>
+            <li>用可执行的方式验收功能，而不只是阅读代码</li>
+          </ul>
+        </section>
+        <section class="about-block">
+          <h2>联系</h2>
+          <dl>
+            <div class="contact-row">
+              <dt>邮箱</dt>
+              <dd><a href="mailto:hello@iamchh.com">hello@iamchh.com</a></dd>
+            </div>
+            <div class="contact-row">
+              <dt>站点</dt>
+              <dd>iamchh.com</dd>
+            </div>
+          </dl>
+        </section>
+        <p class="about-note">此页为示意：只写角色、方向和联系方式占位，不展开完整履历，也不使用真实姓名。</p>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>iamchh · 界面示意原型</span>
+      <span>内容与项目均为占位，不代表已发布作品</span>
+    </div>
+  </footer>
+  <nav class="tabbar" aria-label="底部导航">
+    <a href="works.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.2"/></svg>作品集</a>
+    <a href="blog.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h7.2L20.5 9.8V20.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5z"/><path d="M14 3.5V9h6"/></svg>博客</a>
+    <a href="collection.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19.2S4.4 14.1 4.4 9.7A3.7 3.7 0 0 1 12 8.1a3.7 3.7 0 0 1 7.6 1.6C19.6 14.1 12 19.2 12 19.2z"/></svg>收藏</a>
+    <a href="about.html" class="is-active"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.2" r="3.1"/><path d="M5.6 19.2c.7-3.2 3.2-5 6.4-5s5.7 1.8 6.4 5"/></svg>关于我</a>
+  </nav>
+  <script src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>收藏 · iamchh</title>
+  <meta name="description" content="iamchh 的个人网站示意原型。游戏前端 / Cocos，也在搜索 AI 辅助开发。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="has-tabbar">
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html">iamchh</a>
+      <nav class="nav-desktop" aria-label="主导航">
+        <a href="works.html">作品集</a>
+        <a href="blog.html">博客</a>
+        <a href="collection.html" class="is-active">收藏</a>
+        <a href="about.html">关于我</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <div class="drawer" id="mobile-drawer" aria-hidden="true">
+    <nav aria-label="移动菜单">
+      <a href="index.html">首页</a>
+      <a href="works.html">作品集</a>
+      <a href="blog.html">博客</a>
+      <a href="collection.html" class="is-active">收藏</a>
+      <a href="about.html">关于我</a>
+    </nav>
+  </div>
+  <main id="main">
+    <header class="page-head wrap">
+      <h1>收藏</h1>
+      <p class="sub">值得留下的文章、Skill 和工具</p>
+    </header>
+    <div class="wrap">
+      <div class="collect-tools" data-collect>
+        <label class="collect-search">
+          <input type="search" aria-label="搜索收藏" placeholder="搜索标题、说明或 slug" autocomplete="off" enterkeyhint="search">
+        </label>
+        <div class="filters" data-collect-filter="cat" role="group" aria-label="按类型筛选收藏">
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">全部</button>
+          <button class="filter-btn" type="button" data-filter="article" aria-pressed="false">文章</button>
+          <button class="filter-btn" type="button" data-filter="skill" aria-pressed="false">Skill</button>
+          <button class="filter-btn" type="button" data-filter="tool" aria-pressed="false">工具</button>
+        </div>
+        <div class="filters" data-collect-filter="kind" role="group" aria-label="按 Skill 细分">
+          <button class="filter-btn" type="button" data-kind="workflow" aria-pressed="false">工作技能</button>
+          <button class="filter-btn" type="button" data-kind="principle" aria-pressed="false">工程原则</button>
+        </div>
+      </div>
+      <div class="collect-grid">
+        <a class="collect-item" data-cat="article" href="https://www.infoq.cn/" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">文章</span>
+          <div class="collect-item__top">
+            <h3>构建高可用系统的 7 个关键原则</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">来源：InfoQ · 2024</p>
+          <p class="collect-item__why">系统设计中的稳定性思考，值得反复温习。</p>
+        </a>
+        <a class="collect-item" data-cat="article" href="https://martinfowler.com/" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">文章</span>
+          <div class="collect-item__top">
+            <h3>现代前端架构的演进路径</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">来源：Martin Fowler · 2023</p>
+          <p class="collect-item__why">从单页应用到微前端与模块联邦的思考。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="architect" href="https://github.com/cursor/plugins/blob/main/pstack/skills/architect/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>先定架构再写代码</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · architect</p>
+          <p class="collect-item__why">用于跨函数、模块的复杂改动。先研究现有系统，并行比较类型、接口和模块草图，再综合方案实现；反复受阻时重新设计。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="arena" href="https://github.com/cursor/plugins/blob/main/pstack/skills/arena/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>多案竞选择优融合</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · arena</p>
+          <p class="collect-item__why">用于一个方案可能过早定型的任务。让多个候选独立完成同一题目，按标准评分并交叉评审，选出底稿、吸收其他方案优点并验证。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="automate-me" href="https://github.com/cursor/plugins/blob/main/pstack/skills/automate-me/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>提炼个人工作模式</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · automate-me</p>
+          <p class="collect-item__why">用于把自己的工作习惯变成代理可遵循的模式。结合当前工作区近期对话和本人反馈，创建或更新个人 -mode 技能。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="benchmark-checklist" href="https://github.com/cursor/plugins/blob/main/pstack/skills/benchmark-checklist/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>核验性能测量结论</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · benchmark-checklist</p>
+          <p class="collect-item__why">用于运行基准或报告实测提速、回退。检查瓶颈、配置、错误、工作是否真正执行及重复性，避免拿失真的数字做决策。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="blast-radius" href="https://github.com/cursor/plugins/blob/main/pstack/skills/blast-radius/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>追查改动外溢风险</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · blast-radius</p>
+          <p class="collect-item__why">用于判断小改动可能破坏哪些周边行为。追踪跨库、时序和数据格式影响，找出安全所依赖的关键事实，并用真实代码验证。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="bro" href="https://github.com/cursor/plugins/blob/main/pstack/skills/bro/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>把上条回复说人话</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · bro</p>
+          <p class="collect-item__why">用于上一条回复术语太多或难懂时。用简洁、自然的日常语言重新表述同一内容。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="correct" href="https://github.com/cursor/plugins/blob/main/pstack/skills/correct/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>从结构上杜绝惯犯</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · correct</p>
+          <p class="collect-item__why">用于代理在同一仓库反复犯相同错误。归纳重复失误，优先用架构和类型消除，再用检查或测试约束，并证明能拦住旧错误。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="create-formal-verification-skill" href="https://github.com/cursor/plugins/blob/main/pstack/skills/create-formal-verification-skill/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>创建形式验证技能</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · create-formal-verification-skill</p>
+          <p class="collect-item__why">用于并发、重试、不变量等测试难覆盖的高风险逻辑。选择合适验证工具，验证关键性质，并留下可重跑、注明范围和代码对应关系的项目技能。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="create-verification-skill" href="https://github.com/cursor/plugins/blob/main/pstack/skills/create-verification-skill/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>创建真实应用验证</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · create-verification-skill</p>
+          <p class="collect-item__why">用于项目缺少可脚本化的行为证明方式。根据仓库生成启动、健康检查、操作、取证和清理流程，以及用户功能地图，并跑通一次。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="figure-it-out" href="https://github.com/cursor/plugins/blob/main/pstack/skills/figure-it-out/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>为复杂任务定流程</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · figure-it-out</p>
+          <p class="collect-item__why">用于没有现成流程可套用的大型迁移或多部分任务。先明确完成判据和风险，再设计可审计步骤，逐项实验验证并记录决策。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="how" href="https://github.com/cursor/plugins/blob/main/pstack/skills/how/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>读懂系统如何运转</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · how</p>
+          <p class="collect-item__why">用于代码走读、理解子系统或判断功能应放在哪层。按复杂度安排探索与综合，说明核心概念、运行流程、模块归属和注意点。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="in-your-own-words" href="https://github.com/cursor/plugins/blob/main/pstack/skills/in-your-own-words/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>复述目标确认理解</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · in-your-own-words</p>
+          <p class="collect-item__why">用于检查代理是否理解了需求。用自己的话说明用户想达到什么目标、正在解决什么问题。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="interrogate" href="https://github.com/cursor/plugins/blob/main/pstack/skills/interrogate/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>多方对抗实证评审</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · interrogate</p>
+          <p class="collect-item__why">用于挑战代码、改动或设计的盲点。让多个评审尝试破坏目标，仅保留实际运行可重现的问题，报告发现而不直接修复。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="ketchup-video" href="https://github.com/cursor/plugins/blob/main/pstack/skills/ketchup-video/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>用短视频补齐进展</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · ketchup-video</p>
+          <p class="collect-item__why">用于希望快速看懂本轮对话进展时。把已有事实和产物整理成带字幕的简短视频，并在视频下列出需要本人决定的事项。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="ketchup" href="https://github.com/cursor/plugins/blob/main/pstack/skills/ketchup/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>补齐本轮工作进展</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · ketchup</p>
+          <p class="collect-item__why">用于离开一会儿后了解本次对话发生了什么。只读核查进展，以简明文字和已有图像说明变化，并列全需要本人决定的事项。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="maintain-formal-verification-skill" href="https://github.com/cursor/plugins/blob/main/pstack/skills/maintain-formal-verification-skill/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>同步维护形式验证</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · maintain-formal-verification-skill</p>
+          <p class="collect-item__why">用于被验证代码变化后检查模型是否过时。追溯覆盖代码的提交，更新验证而不改产品代码，重跑并区分模型漂移与真实缺陷。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="maintain-verification-skill" href="https://github.com/cursor/plugins/blob/main/pstack/skills/maintain-verification-skill/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>维护应用验证地图</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · maintain-verification-skill</p>
+          <p class="collect-item__why">用于审计已有验证技能及功能地图。并行核对功能源码，再由协调者逐项实测，只提交有证据支持的文档、地图或操作脚本修正。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="make-bot-ui" href="https://github.com/cursor/plugins/blob/main/pstack/skills/make-bot-ui/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>制作机器人操作页</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · make-bot-ui</p>
+          <p class="collect-item__why">用于制作按钮可唤醒 Grok Bot 的网页或仪表盘。由服务端向 webhook 例程发送请求，密钥留在服务端，并可通过 Tailscale 提供访问。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="no-comments" href="https://github.com/cursor/plugins/blob/main/pstack/skills/no-comments/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>清理注释修正根因</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · no-comments</p>
+          <p class="collect-item__why">用于审查改动中的注释与抑制指令。调用专门评审，清理应删除的内容并修复相关根因；对约束考虑改成类型、测试或检查。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="poteto-help" href="https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-help/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>查询工作流与用法</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · poteto-help</p>
+          <p class="collect-item__why">用于了解 pstack 设置、技能选择和运行问题。依据对应源文档回答，给出一个可发送的提示词和公开链接，不把咨询直接当成执行请求。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="poteto-mode" href="https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>统筹严谨开发流程</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · poteto-mode</p>
+          <p class="collect-item__why">用于采用 poteto 的代理工作风格。按任务选择调查、开发、排错、交付等流程，协调子代理与其他技能，并要求真实验证和简洁汇报。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-attack-the-premise" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-attack-the-premise/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>连败先验证共同前提</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-attack-the-premise</p>
+          <p class="collect-item__why">用于多个修复都基于同一假设且连续失败时。先写明并直接测试共同前提，再沿证据找原因，避免继续给错误假设打补丁。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-boundary-discipline" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-boundary-discipline/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>边界校验内部纯净</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-boundary-discipline</p>
+          <p class="collect-item__why">用于安排校验、错误处理和框架适配。把原始数据检查集中在系统边界，内部信任类型，业务逻辑尽量使用纯函数。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-build-the-lever" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-build-the-lever/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>先造可重跑的工具</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-build-the-lever</p>
+          <p class="collect-item__why">用于非平凡的编辑、迁移、分析或检查。先建立完成或证明任务的最小脚本、生成器或统一操作规范，让结果可以复现和复核。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-encode-lessons-in-structure" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-encode-lessons-in-structure/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>把重复教训固化约束</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-encode-lessons-in-structure</p>
+          <p class="collect-item__why">用于同一指令或纠正第二次出现时。优先把规则编码成 lint、元数据、运行时检查或脚本；无法编码的判断才强化文字与反例。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-exhaust-the-design-space" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-exhaust-the-design-space/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>多种原型并排比较</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-exhaust-the-design-space</p>
+          <p class="collect-item__why">用于缺少先例的交互、产品体验或架构选择。先做两到三个相互竞争的原型并比较，再决定采用哪一种。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-experience-first" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-experience-first/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>用户体验优先取舍</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-experience-first</p>
+          <p class="collect-item__why">用于产品、交互和功能范围的权衡。优先打磨核心体验，宁可少做而做精，同时考虑使用者和后续维护者的负担。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-explain-the-number" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-explain-the-number/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>先解释数字再下结论</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-explain-the-number</p>
+          <p class="collect-item__why">用于测量或使用性能、吞吐、延迟及评测数字。先明确什么结果会改变决策，再找瓶颈，排除噪声、错误和未执行工作，并保留证据。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-fix-root-causes" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-fix-root-causes/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>追到源头修复故障</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-fix-root-causes</p>
+          <p class="collect-item__why">用于调试与排错。先复现并追到最早错误决策，区分合法异常状态与不该出现的状态，修复根因而不是靠守卫或重试掩盖症状。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-foundational-thinking" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-foundational-thinking/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>先定数据再铺基础</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-foundational-thinking</p>
+          <p class="collect-item__why">用于写逻辑前选择核心类型、数据结构和工作顺序。先减负，再建立共享基础与测试；并发场景先判断是否应隔离状态。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-guard-the-context-window" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-guard-the-context-window/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>控制上下文信息负担</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-guard-the-context-window</p>
+          <p class="collect-item__why">用于大输出、长文件或并行规划挤占上下文时。把批量阅读交给子代理，主线程保留摘要，并限制阶段范围与预算。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-laziness-protocol" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-laziness-protocol/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>以最小改动解决问题</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-laziness-protocol</p>
+          <p class="collect-item__why">用于重构、衡量改动规模或考虑增加抽象时。优先删除与简化，把重复决策收敛到单一来源，避免无必要的层和模板代码。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-make-operations-idempotent" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-make-operations-idempotent/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>让重复执行安全收敛</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-make-operations-idempotent</p>
+          <p class="collect-item__why">用于可能崩溃、重启或重试的命令和处理循环。根据当前状态只补齐与目标的差异，并让遗留半成品可识别、可恢复。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-migrate-callers-then-delete-legacy-apis" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>迁移调用后删除旧接口</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-migrate-callers-then-delete-legacy-apis</p>
+          <p class="collect-item__why">用于无需对外兼容的内部接口改造。一次协调迁移调用方、更新新契约测试并删除旧接口，避免留下临时兼容层。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-minimize-reader-load" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-minimize-reader-load/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>减少阅读跳转与隐态</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-minimize-reader-load</p>
+          <p class="collect-item__why">用于代码难追踪或层次过多时。合并价值不足的包装层，缩小可变状态范围，让读者容易看清数据来源与修改者。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-model-the-domain" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-model-the-domain/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>用结构表达领域规则</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-model-the-domain</p>
+          <p class="collect-item__why">用于有状态逻辑、分支膨胀或多处重复数据假设时。选择状态机、类型模型、注册表等合适结构，集中规则并减少非法状态。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-never-block-on-the-human" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-never-block-on-the-human/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>可逆工作先做再汇报</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-never-block-on-the-human</p>
+          <p class="collect-item__why">用于可逆执行细节不值得等待本人确认时。作出合理选择后展示结果，让人异步纠偏；不可逆操作仍需确认。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-outcome-oriented-execution" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-outcome-oriented-execution/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>围绕最终状态推进迁移</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-outcome-oriented-execution</p>
+          <p class="collect-item__why">用于有明确阶段边界的重写或迁移。以目标架构为准，允许计划内、可逆的中间破坏，避免为过渡状态堆兼容代码，并在终点完整验证。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-prove-it-works" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-prove-it-works/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>核查真实产物再报完成</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-prove-it-works</p>
+          <p class="collect-item__why">用于任务完成前判断结果是否可信。直接运行功能、读取实际值或检查真实差异，能脚本化就留下可重复执行的验证。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-redesign-from-first-principles" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-redesign-from-first-principles/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>把新需求纳入整体设计</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-redesign-from-first-principles</p>
+          <p class="collect-item__why">用于向已有系统加入新要求。假设该要求从第一天就存在，重新考虑整体结构，更新所有引用，再分步交付而非局部拼接。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-separate-before-serializing-shared-state" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-separate-before-serializing-shared-state/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>先隔离共享写入目标</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-separate-before-serializing-shared-state</p>
+          <p class="collect-item__why">用于多个并发执行者可能写同一文件、分支或对象时。优先分配独立所有权，只有共享确属必要时才用锁、单写者或原子操作串行化。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-sequence-verifiable-units" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-sequence-verifiable-units/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>拆成逐步可验证单元</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-sequence-verifiable-units</p>
+          <p class="collect-item__why">用于批量修改、迁移和提交堆叠。每个小单元都从已知良好状态开始，改完即验证，再按能证明前后因果的顺序交付。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-subtract-before-you-add" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-subtract-before-you-add/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>先删冗余再增加能力</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-subtract-before-you-add</p>
+          <p class="collect-item__why">用于安排新增、重构或重写顺序。先移除死代码、重复校验和无内容引用，再在更简单的基础上建设，避免为猜测场景预留复杂性。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-test-behavior-not-implementation" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-test-behavior-not-implementation/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>测试可观察行为契约</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-test-behavior-not-implementation</p>
+          <p class="collect-item__why">用于新增、修改或保留测试时。通过用户或调用方使用的接口断言结果和外部影响，使测试能抓住行为破坏又能承受内部重构。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="principle" data-kind-label="工程原则" data-slug="principle-type-system-discipline" href="https://github.com/cursor/plugins/blob/main/pstack/skills/principle-type-system-discipline/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>用类型排除非法状态</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工程原则 · principle-type-system-discipline</p>
+          <p class="collect-item__why">用于静态类型设计和函数签名评审。区分语义不同的基础值，在边界解析外部数据，并从权威 schema 派生类型，让编译器阻止不合法组合。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="recall" href="https://github.com/cursor/plugins/blob/main/pstack/skills/recall/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>找回跨会话工作上下文</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · recall</p>
+          <p class="collect-item__why">用于开始或恢复某个主题的近期工作。结合限定工作区的历史对话、共享记录和当前状态，整理决策、未完成线程、反复问题及下一步。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="reflect" href="https://github.com/cursor/plugins/blob/main/pstack/skills/reflect/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>复盘会话沉淀技能改进</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · reflect</p>
+          <p class="collect-item__why">用于从刚完成的工作提炼长期经验。并行评审判断、工具和其他视角，综合为具体技能修改建议；获明确批准后才应用接受的改动。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="setup-pstack" href="https://github.com/cursor/plugins/blob/main/pstack/skills/setup-pstack/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>配置角色模型与预算</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · setup-pstack</p>
+          <p class="collect-item__why">用于初始化或调整 pstack 的模型分工及推理预算。确认当前可用模型，按角色写入常驻规则，并可建议补建项目验证技能。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="sharpen" href="https://github.com/cursor/plugins/blob/main/pstack/skills/sharpen/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>把任务提示词深化</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · sharpen</p>
+          <p class="collect-item__why">用于发送任务前提高提示词的专业深度。补出专家方法、原始材料、具体工具和独立验证依据，再重写提示词，不直接执行任务。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="show-me-your-work" href="https://github.com/cursor/plugins/blob/main/pstack/skills/show-me-your-work/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>记录可审计决策轨迹</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · show-me-your-work</p>
+          <p class="collect-item__why">用于长时间、无人值守或多阶段工作。用单一 TSV 记录选择、理由、证据与结果，结束时对照对话审计，并安排跨模型检查风险。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="statechart" href="https://github.com/cursor/plugins/blob/main/pstack/skills/statechart/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>验证状态模型并绘图</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · statechart</p>
+          <p class="collect-item__why">用于理解产品流程、协议或服务的状态变化。检查 TLA+ 模型，绘制 Mermaid 状态图，并用读者语言给出违反规则状态的最短路径。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="swarm" href="https://github.com/cursor/plugins/blob/main/pstack/skills/swarm/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>并行分工汇总覆盖</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · swarm</p>
+          <p class="collect-item__why">用于分片检查、探索或多个执行者竞赛。预先声明完成条件和竞赛规则，给工作者独立输出位置，再汇总结果、证据和覆盖缺口。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="tdd" href="https://github.com/cursor/plugins/blob/main/pstack/skills/tdd/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>先写失败测试再修复</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · tdd</p>
+          <p class="collect-item__why">用于明确要求 TDD 或有便宜清晰本地测试路径的缺陷。先证明回归检查因目标问题失败，再做最小修复并验证通过；不强行为昂贵场景造测试。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="teach" href="https://github.com/cursor/plugins/blob/main/pstack/skills/teach/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>把原理与缘由讲明白</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · teach</p>
+          <p class="collect-item__why">用于真正理解某个改动或子系统。调用 how、why 研究机制和设计动因，再按读者需要用白话分层解释，复杂关系逐步配图。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="technical-writing" href="https://github.com/cursor/plugins/blob/main/pstack/skills/technical-writing/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>按技术文档标准写作</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · technical-writing</p>
+          <p class="collect-item__why">用于文档、RFC、README、PR 描述和提交信息。先区分教程、操作指南、参考或解释，再应用清楚直接、低歧义的技术写作规则。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="typescript-best-practices" href="https://github.com/cursor/plugins/blob/main/pstack/skills/typescript-best-practices/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>约束类型脚本代码质量</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · typescript-best-practices</p>
+          <p class="collect-item__why">用于阅读或修改 TypeScript 文件。优先判别联合、品牌类型、边界 schema 和穷尽检查，减少 any 与断言，并要求真实测试和结构化日志。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="unslop" href="https://github.com/cursor/plugins/blob/main/pstack/skills/unslop/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>去除写作中的机器腔</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · unslop</p>
+          <p class="collect-item__why">用于清理任何文字中的 AI 写作痕迹。删空话、夸饰、抽象隐喻和模板句式，改成具体、主动、自然且保留原意的表达。</p>
+        </a>
+        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="why" href="https://github.com/cursor/plugins/blob/main/pstack/skills/why/SKILL.md" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">Skill</span>
+          <div class="collect-item__top">
+            <h3>追溯设计缘由与证据</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">Cursor pstack · 工作技能 · why</p>
+          <p class="collect-item__why">用于追问设计选择、回归、事故或阈值来源。以代码与提交为锚点并行查询可用证据来源，区分事实、合理推断、竞争解释和未知项。</p>
+        </a>
+        <a class="collect-item" data-cat="tool" href="https://excalidraw.com/" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">工具</span>
+          <div class="collect-item__top">
+            <h3>Excalidraw – 轻量白板绘图工具</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">来源：Excalidraw</p>
+          <p class="collect-item__why">手绘风格的架构图工具，简单但表达力强。</p>
+        </a>
+        <a class="collect-item" data-cat="tool" href="https://httpie.io/" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">工具</span>
+          <div class="collect-item__top">
+            <h3>HTTPie – 现代 HTTP 客户端</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">来源：HTTPie</p>
+          <p class="collect-item__why">比 curl 更友好的接口测试工具。</p>
+        </a>
+        <a class="collect-item" data-cat="article" href="https://bartoszmilewski.com/" target="_blank" rel="noopener noreferrer">
+          <span class="collect-item__cat">文章</span>
+          <div class="collect-item__top">
+            <h3>函数式编程的本质</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">来源：Bartosz Milewski's Blog</p>
+          <p class="collect-item__why">从范畴论角度理解 FP，深入但不枯燥。</p>
+        </a>
+        <a class="collect-item" data-cat="article" href="placeholder.html">
+          <span class="collect-item__cat">文章</span>
+          <div class="collect-item__top">
+            <h3>缓存的正确姿势</h3>
+            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="collect-item__src">来源：高并发系统设计</p>
+          <p class="collect-item__why">缓存设计中的一致性与穿透问题。</p>
+        </a>
+      </div>
+      <p class="collect-empty" hidden>没有符合筛选的收藏。</p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>iamchh · 界面示意原型</span>
+      <span>文章与工具仍为占位；Skill 来自 Cursor pstack</span>
+    </div>
+  </footer>
+  <nav class="tabbar" aria-label="底部导航">
+    <a href="works.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.2"/></svg>作品集</a>
+    <a href="blog.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h7.2L20.5 9.8V20.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5z"/><path d="M14 3.5V9h6"/></svg>博客</a>
+    <a href="collection.html" class="is-active"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19.2S4.4 14.1 4.4 9.7A3.7 3.7 0 0 1 12 8.1a3.7 3.7 0 0 1 7.6 1.6C19.6 14.1 12 19.2 12 19.2z"/></svg>收藏</a>
+    <a href="about.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.2" r="3.1"/><path d="M5.6 19.2c.7-3.2 3.2-5 6.4-5s5.7 1.8 6.4 5"/></svg>关于我</a>
+  </nav>
+  <script src="js/site.js"></script>
+</body>
+</html>
