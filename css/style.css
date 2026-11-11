@@ -847,6 +847,41 @@ body.menu-open .drawer {
   margin-top: 0.35rem;
 }
 
+.article .body ul.mindmap {
+  margin: 0;
+  list-style: disc;
+}
+
+.article .body ul.mindmap > li {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.article .body ul.mindmap > li + li {
+  margin-top: 1.15rem;
+}
+
+.article .body ul.mindmap ul {
+  margin-top: 0.35rem;
+  font-weight: 400;
+  color: var(--text-soft);
+  list-style: circle;
+}
+
+.article .body ul.mindmap ul ul {
+  list-style: square;
+}
+
+.article .body code {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.86em;
+  color: var(--text);
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.08em 0.38em;
+}
+
 .article .body a {
   color: var(--gold);
   overflow-wrap: anywhere;
