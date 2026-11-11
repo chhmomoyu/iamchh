@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>iamchh</title>
-  <meta name="description" content="iamchh 的个人网站示意原型。游戏前端 / Cocos，也在搜索 AI 辅助开发。">
+  <meta name="description" content="iamchh。关注用 AI 协助做软件，以及怎样让 Agent 的交付可被验证。">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
     <div class="wrap header-inner">
       <a class="logo" href="index.html">iamchh</a>
       <nav class="nav-desktop" aria-label="主导航">
-        <a href="works.html" class="is-active">作品集</a>
+        <a href="works.html">作品集</a>
         <a href="blog.html">博客</a>
         <a href="collection.html">收藏</a>
         <a href="about.html">关于我</a>
@@ -40,65 +40,45 @@
   <main id="main">
     <section class="hero wrap">
       <h1>iamchh</h1>
-      <p class="lede">游戏前端 / Cocos，也在搜索 <span class="hl">AI</span> 辅助开发</p>
-      <p class="cta"><a class="text-link" href="works.html">查看作品 <span class="arrow">→</span></a></p>
+      <p class="lede">关注用 <span class="hl">AI</span> 协助做软件，以及怎样让 Agent 的交付可被验证</p>
+      <p class="cta"><a class="text-link" href="blog.html">阅读笔记 <span class="arrow">→</span></a></p>
     </section>
-    <section class="featured wrap" id="selected">
+    <section class="featured wrap" id="notes">
       <div class="section-head">
-        <h2 class="section-kicker">选作品</h2>
-        <a class="text-link hide-desktop" href="works.html">查看全部 <span class="arrow">→</span></a>
+        <h2 class="section-kicker">笔记</h2>
+        <a class="text-link" href="blog.html">全部笔记 <span class="arrow">→</span></a>
       </div>
-      <div class="feature-grid">
-        <a class="work-card" href="work.html?id=hud" data-cat="game">
-          <div class="work-card__media">
-            <img src="assets/hud.png" alt="深色科幻风战斗界面示意，圆形仪表与金色刻度" width="800" height="500">
-            <span class="badge">示意</span>
-          </div>
-          <div class="work-card__body">
-            <span class="work-card__cat">游戏前端</span>
-            <h3>小游戏界面</h3>
-            <p class="work-card__sub">战斗状态与血条设计</p>
-            <p class="work-card__desc">战斗状态、血条与关键数值的界面示意。</p>
-            <span class="text-link work-card__go">查看项目 <span class="arrow">→</span></span>
-          </div>
+      <div class="blog-list">
+        <a class="blog-item" href="notes/browser-hand.html">
+          <div class="blog-item__meta"><span>笔记</span></div>
+          <h3>浏览器手夹——让 AI 验收自己写的功能</h3>
+          <p>希望给浏览器加一层「手夹」，让 AI 能点、看、测自己刚写的功能。还没有落地方案。</p>
         </a>
-        <a class="work-card" href="work.html?id=editor" data-cat="game">
-          <div class="work-card__media">
-            <img src="assets/editor.png" alt="深色编辑器小窗口示意，左侧代码与右侧工具栏" width="800" height="500">
-            <span class="badge">示意</span>
-          </div>
-          <div class="work-card__body">
-            <span class="work-card__cat">游戏前端</span>
-            <h3>工具小窗口</h3>
-            <p class="work-card__sub">编辑器工具与参数面板</p>
-            <p class="work-card__desc">编辑器小窗口与参数面板的排布示意。</p>
-            <span class="text-link work-card__go">查看项目 <span class="arrow">→</span></span>
-          </div>
+        <a class="blog-item" href="notes/tla-plus.html">
+          <div class="blog-item__meta"><span>笔记</span></div>
+          <h3>做类似分支状态判断的逻辑时，可以考虑 TLA+</h3>
+          <p>这是学习感悟，不是在项目里验证过的结论。简单的 if/else 不一定需要 TLA+。</p>
         </a>
-        <a class="work-card" href="work.html?id=practice" data-cat="practice">
-          <div class="work-card__media">
-            <img src="assets/grid.png" alt="深色网格练习页示意，节点与金色锚点分布在格子上" width="800" height="500">
-            <span class="badge">示意</span>
-          </div>
-          <div class="work-card__body">
-            <span class="work-card__cat">练习</span>
-            <h3>练习页面</h3>
-            <p class="work-card__sub">参数调试与动效练习</p>
-            <p class="work-card__desc">用于参数调试和动效试验的网格练习页。</p>
-            <span class="text-link work-card__go">查看项目 <span class="arrow">→</span></span>
-          </div>
+        <a class="blog-item" href="notes/overlay-input.html">
+          <div class="blog-item__meta"><span>笔记</span></div>
+          <h3>Windows 置顶透明悬浮输入框（tkinter 提示词）</h3>
+          <p>一条可复用的 tkinter 提示词：置顶无边框，用抠色键做透明。不是已经完成的软件。</p>
+        </a>
+        <a class="blog-item" href="notes/feature-pipeline.html">
+          <div class="blog-item__meta"><span>笔记</span></div>
+          <h3>两天到半天：用流水线把策划案落到能点、能通协议</h3>
+          <p>初版就把「把策划案丢给 AI」从约 2 天缩短到约半天</p>
         </a>
       </div>
     </section>
   </main>
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <span>iamchh · 界面示意原型</span>
-      <span>内容与项目均为占位，不代表已发布作品</span>
+      <span>iamchh</span>
     </div>
   </footer>
   <nav class="tabbar" aria-label="底部导航">
-    <a href="works.html" class="is-active"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.2"/></svg>作品集</a>
+    <a href="works.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.2"/></svg>作品集</a>
     <a href="blog.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h7.2L20.5 9.8V20.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5z"/><path d="M14 3.5V9h6"/></svg>博客</a>
     <a href="collection.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19.2S4.4 14.1 4.4 9.7A3.7 3.7 0 0 1 12 8.1a3.7 3.7 0 0 1 7.6 1.6C19.6 14.1 12 19.2 12 19.2z"/></svg>收藏</a>
     <a href="about.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.2" r="3.1"/><path d="M5.6 19.2c.7-3.2 3.2-5 6.4-5s5.7 1.8 6.4 5"/></svg>关于我</a>

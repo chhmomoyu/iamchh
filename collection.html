@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>收藏 · iamchh</title>
-  <meta name="description" content="iamchh 的个人网站示意原型。游戏前端 / Cocos，也在搜索 AI 辅助开发。">
+  <meta name="description" content="iamchh。关注用 AI 协助做软件，以及怎样让 Agent 的交付可被验证。">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,23 +59,68 @@
         </div>
       </div>
       <div class="collect-grid">
-        <a class="collect-item" data-cat="article" href="https://www.infoq.cn/" target="_blank" rel="noopener noreferrer">
+        <a class="collect-item" data-cat="article" data-slug="check-scripts" href="notes/check-scripts.html">
           <span class="collect-item__cat">文章</span>
           <div class="collect-item__top">
-            <h3>构建高可用系统的 7 个关键原则</h3>
-            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+            <h3>用检查脚本驯服 Agent——确定性兜底和纠错资产</h3>
+            <span class="collect-item__arrow" aria-hidden="true">→</span>
           </div>
-          <p class="collect-item__src">来源：InfoQ · 2024</p>
-          <p class="collect-item__why">系统设计中的稳定性思考，值得反复温习。</p>
+          <p class="collect-item__src">来源：@xiaomanhedy</p>
+          <p class="collect-item__why">少把规矩写进会忘的 Prompt，改为让 AI 写检查脚本。生成前后先跑检查，拦截日志可以积累成场景评测集。</p>
         </a>
-        <a class="collect-item" data-cat="article" href="https://martinfowler.com/" target="_blank" rel="noopener noreferrer">
+        <a class="collect-item" data-cat="article" data-slug="verification-skill" href="notes/verification-skill.html">
           <span class="collect-item__cat">文章</span>
           <div class="collect-item__top">
-            <h3>现代前端架构的演进路径</h3>
-            <span class="collect-item__arrow" aria-hidden="true">↗</span>
+            <h3>Verification Skill：信任来自可执行验证</h3>
+            <span class="collect-item__arrow" aria-hidden="true">→</span>
           </div>
-          <p class="collect-item__src">来源：Martin Fowler · 2023</p>
-          <p class="collect-item__why">从单页应用到微前端与模块联邦的思考。</p>
+          <p class="collect-item__src">来源：@xiaohuiyuan</p>
+          <p class="collect-item__why">扩展 Agent 产能的前提是能验证交付物。这是方法笔记，不是 pstack Skill，也不是已经做好的浏览器自动化。</p>
+        </a>
+        <a class="collect-item" data-cat="article" data-slug="handoff-doc" href="notes/handoff-doc.html">
+          <span class="collect-item__cat">文章</span>
+          <div class="collect-item__top">
+            <h3>Hand-off Doc：把任务状态写成可交接短文档</h3>
+            <span class="collect-item__arrow" aria-hidden="true">→</span>
+          </div>
+          <p class="collect-item__src">来源：MiniMax-AI/mcode-stack</p>
+          <p class="collect-item__why">换会话前把目标、决定、约束和已核实的状态写成同一篇短文档。新会话先复述，再动手。</p>
+        </a>
+        <a class="collect-item" data-cat="article" data-slug="cocos-profiler" href="notes/cocos-profiler.html">
+          <span class="collect-item__cat">文章</span>
+          <div class="collect-item__top">
+            <h3>实战用 AI 看 Cocos Profiler，定位战斗性能</h3>
+            <span class="collect-item__arrow" aria-hidden="true">→</span>
+          </div>
+          <p class="collect-item__src">来源：公众号「游戏开发入门」</p>
+          <p class="collect-item__why">战斗峰值先查 Game Logic，再查小批次 DrawCall。这是公众号文章的阅读笔记，不是 iamchh 的作品。</p>
+        </a>
+        <a class="collect-item" data-cat="article" data-slug="plain-language" href="notes/plain-language.html">
+          <span class="collect-item__cat">文章</span>
+          <div class="collect-item__top">
+            <h3>不会描述就直说——先对齐语言，再出分镜和成片</h3>
+            <span class="collect-item__arrow" aria-hidden="true">→</span>
+          </div>
+          <p class="collect-item__src">来源：@poteto</p>
+          <p class="collect-item__why">说不清时先承认缺少词汇，对齐语言后再做分镜和成片。sharpen 只记方法，不重复上架。</p>
+        </a>
+        <a class="collect-item" data-cat="article" data-slug="reread-usage" href="notes/reread-usage.html">
+          <span class="collect-item__cat">文章</span>
+          <div class="collect-item__top">
+            <h3>额度往往花在重读旧对话和空转检查</h3>
+            <span class="collect-item__arrow" aria-hidden="true">→</span>
+          </div>
+          <p class="collect-item__src">来源：@Marko_Poly</p>
+          <p class="collect-item__why">用量常常耗在重读旧对话。例行任务改为事件触发，长对话留下短摘要后再开新聊天。</p>
+        </a>
+        <a class="collect-item" data-cat="article" data-slug="cli-watch" href="notes/cli-watch.html">
+          <span class="collect-item__cat">文章</span>
+          <div class="collect-item__top">
+            <h3>盯着 CLI 看也会很快耗尽用量</h3>
+            <span class="collect-item__arrow" aria-hidden="true">→</span>
+          </div>
+          <p class="collect-item__src">来源：@minheo93698092</p>
+          <p class="collect-item__why">反复盯着 CLI 屏幕和整段日志本身就很贵。只在结束或出错时通知，并拉长确认间隔。</p>
         </a>
         <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="architect" href="https://github.com/cursor/plugins/blob/main/pstack/skills/architect/SKILL.md" target="_blank" rel="noopener noreferrer">
           <span class="collect-item__cat">Skill</span>
@@ -140,7 +185,7 @@
           <p class="collect-item__src">Cursor pstack · 工作技能 · correct</p>
           <p class="collect-item__why">用于代理在同一仓库反复犯相同错误。归纳重复失误，优先用架构和类型消除，再用检查或测试约束，并证明能拦住旧错误。</p>
         </a>
-        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="create-formal-verification-skill" href="https://github.com/cursor/plugins/blob/main/pstack/skills/create-formal-verification-skill/SKILL.md" target="_blank" rel="noopener noreferrer">
+        <a class="collect-item" id="create-formal-verification-skill" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="create-formal-verification-skill" href="https://github.com/cursor/plugins/blob/main/pstack/skills/create-formal-verification-skill/SKILL.md" target="_blank" rel="noopener noreferrer">
           <span class="collect-item__cat">Skill</span>
           <div class="collect-item__top">
             <h3>创建形式验证技能</h3>
@@ -509,7 +554,7 @@
           <p class="collect-item__src">Cursor pstack · 工作技能 · setup-pstack</p>
           <p class="collect-item__why">用于初始化或调整 pstack 的模型分工及推理预算。确认当前可用模型，按角色写入常驻规则，并可建议补建项目验证技能。</p>
         </a>
-        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="sharpen" href="https://github.com/cursor/plugins/blob/main/pstack/skills/sharpen/SKILL.md" target="_blank" rel="noopener noreferrer">
+        <a class="collect-item" id="sharpen" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="sharpen" href="https://github.com/cursor/plugins/blob/main/pstack/skills/sharpen/SKILL.md" target="_blank" rel="noopener noreferrer">
           <span class="collect-item__cat">Skill</span>
           <div class="collect-item__top">
             <h3>把任务提示词深化</h3>
@@ -527,7 +572,7 @@
           <p class="collect-item__src">Cursor pstack · 工作技能 · show-me-your-work</p>
           <p class="collect-item__why">用于长时间、无人值守或多阶段工作。用单一 TSV 记录选择、理由、证据与结果，结束时对照对话审计，并安排跨模型检查风险。</p>
         </a>
-        <a class="collect-item" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="statechart" href="https://github.com/cursor/plugins/blob/main/pstack/skills/statechart/SKILL.md" target="_blank" rel="noopener noreferrer">
+        <a class="collect-item" id="statechart" data-cat="skill" data-kind="workflow" data-kind-label="工作技能" data-slug="statechart" href="https://github.com/cursor/plugins/blob/main/pstack/skills/statechart/SKILL.md" target="_blank" rel="noopener noreferrer">
           <span class="collect-item__cat">Skill</span>
           <div class="collect-item__top">
             <h3>验证状态模型并绘图</h3>
@@ -599,50 +644,13 @@
           <p class="collect-item__src">Cursor pstack · 工作技能 · why</p>
           <p class="collect-item__why">用于追问设计选择、回归、事故或阈值来源。以代码与提交为锚点并行查询可用证据来源，区分事实、合理推断、竞争解释和未知项。</p>
         </a>
-        <a class="collect-item" data-cat="tool" href="https://excalidraw.com/" target="_blank" rel="noopener noreferrer">
-          <span class="collect-item__cat">工具</span>
-          <div class="collect-item__top">
-            <h3>Excalidraw – 轻量白板绘图工具</h3>
-            <span class="collect-item__arrow" aria-hidden="true">↗</span>
-          </div>
-          <p class="collect-item__src">来源：Excalidraw</p>
-          <p class="collect-item__why">手绘风格的架构图工具，简单但表达力强。</p>
-        </a>
-        <a class="collect-item" data-cat="tool" href="https://httpie.io/" target="_blank" rel="noopener noreferrer">
-          <span class="collect-item__cat">工具</span>
-          <div class="collect-item__top">
-            <h3>HTTPie – 现代 HTTP 客户端</h3>
-            <span class="collect-item__arrow" aria-hidden="true">↗</span>
-          </div>
-          <p class="collect-item__src">来源：HTTPie</p>
-          <p class="collect-item__why">比 curl 更友好的接口测试工具。</p>
-        </a>
-        <a class="collect-item" data-cat="article" href="https://bartoszmilewski.com/" target="_blank" rel="noopener noreferrer">
-          <span class="collect-item__cat">文章</span>
-          <div class="collect-item__top">
-            <h3>函数式编程的本质</h3>
-            <span class="collect-item__arrow" aria-hidden="true">↗</span>
-          </div>
-          <p class="collect-item__src">来源：Bartosz Milewski's Blog</p>
-          <p class="collect-item__why">从范畴论角度理解 FP，深入但不枯燥。</p>
-        </a>
-        <a class="collect-item" data-cat="article" href="placeholder.html">
-          <span class="collect-item__cat">文章</span>
-          <div class="collect-item__top">
-            <h3>缓存的正确姿势</h3>
-            <span class="collect-item__arrow" aria-hidden="true">↗</span>
-          </div>
-          <p class="collect-item__src">来源：高并发系统设计</p>
-          <p class="collect-item__why">缓存设计中的一致性与穿透问题。</p>
-        </a>
       </div>
       <p class="collect-empty" hidden>没有符合筛选的收藏。</p>
     </div>
   </main>
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <span>iamchh · 界面示意原型</span>
-      <span>文章与工具仍为占位；Skill 来自 Cursor pstack</span>
+      <span>iamchh</span>
     </div>
   </footer>
   <nav class="tabbar" aria-label="底部导航">

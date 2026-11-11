@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>两天到半天：用流水线把策划案落到能点、能通协议 · iamchh</title>
+  <meta name="description" content="初版就把「把策划案丢给 AI」从约 2 天缩短到约半天">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body class="has-tabbar">
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="../index.html">iamchh</a>
+      <nav class="nav-desktop" aria-label="主导航">
+        <a href="../works.html">作品集</a>
+        <a href="../blog.html" class="is-active">博客</a>
+        <a href="../collection.html">收藏</a>
+        <a href="../about.html">关于我</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <div class="drawer" id="mobile-drawer" aria-hidden="true">
+    <nav aria-label="移动菜单">
+      <a href="../index.html">首页</a>
+      <a href="../works.html">作品集</a>
+      <a href="../blog.html" class="is-active">博客</a>
+      <a href="../collection.html">收藏</a>
+      <a href="../about.html">关于我</a>
+    </nav>
+  </div>
+  <main id="main">
+    <div class="wrap">
+      <article class="article">
+        <p class="crumb"><a href="../blog.html">博客</a> / 笔记</p>
+        <h1>两天到半天：用流水线把策划案落到能点、能通协议</h1>
+        <p class="meta"><span>笔记</span></p>
+        <div class="body">
+          <ul class="mindmap">
+            <li>为什么做，效果怎样
+              <ul>
+                <li>初版就把「把策划案丢给 AI」从约 2 天缩短到约半天</li>
+                <li>AI 对需求的理解精准率明显提高</li>
+                <li>核心不是多写提示词，而是把关卡和模板先写死</li>
+              </ul>
+            </li>
+            <li>它是什么
+              <ul>
+                <li>功能落地总控，只调度，不自己干活</li>
+                <li>专员各做各的：技术文档、模板拷贝、预制体、配置类型、协议同步、窗口/组件脚本、控制台捕获</li>
+                <li>禁止一人写完四段，禁止子代理冒充专员</li>
+                <li>只读可并行，写文件必须串行</li>
+              </ul>
+            </li>
+            <li>先建预制体模板
+              <ul>
+                <li>把反复会出现的东西先做成模板，再拷进具体功能</li>
+                <li>例如：通用按钮、弹窗、背景，以及后续会沉淀的通用控件</li>
+                <li>整窗模板必须人确认再拷；拷完不算界面阶段结束</li>
+                <li>没有专用图时，可用通用资源占位，并记进卡住项</li>
+              </ul>
+            </li>
+            <li>状态怎么记
+              <ul>
+                <li>全程一份 <code>pipeline.json</code>，换会话先读它 + 技术文档，不认聊天</li>
+                <li>阶段：<code>tech-doc</code> → <code>prefab</code> → <code>scaffold</code> → <code>verify-protocol</code> → <code>done</code></li>
+                <li>状态：<code>running</code> / <code>blocked</code> / <code>awaiting-user</code> / <code>done</code></li>
+                <li>门：模板已确认、节点名对齐、预制体可见、协议往返</li>
+                <li><code>done</code> 的唯一条件：协议往返为真</li>
+              </ul>
+            </li>
+            <li>四段（严格串行）
+              <ul>
+                <li>1 技术文档
+                  <ul>
+                    <li>过关：文档落盘；第四节有全部预制体路径 + 控件表</li>
+                    <li>协议未合、配表没列：只标待确认，不挡住搭界面</li>
+                    <li>「必须先问」未答：停，不准默认实现进第 2 段</li>
+                  </ul>
+                </li>
+                <li>2 界面能看见
+                  <ul>
+                    <li>优先复用已有模板，再改名、对照效果图</li>
+                    <li>文件过关：主窗 + Item 在工程里，节点名对齐，有效果图则对过对照图</li>
+                    <li>对照图只证明工程里能看见，不能代替人看一眼</li>
+                    <li>人过关：刷新后看界面，点头才写脚本；同一轮不准接着写逻辑</li>
+                  </ul>
+                </li>
+                <li>3 写完文档主路径
+                  <ul>
+                    <li>人未点头或节点名未对齐：停或退回第 2 段</li>
+                    <li>写点击、刷新、注册，不是空骨架</li>
+                    <li>要发请求先同步协议；没协议也可先写窗口和注册，只是先不发请求</li>
+                    <li>交互、排序、文案或协议字段对不上：停下来问，不要擅自补一个默认值</li>
+                    <li>能编译、已注册、需求已实现；脚本写完也不算整条流程结束</li>
+                  </ul>
+                </li>
+                <li>4 交互 + 协议跑通（全程必做）
+                  <ul>
+                    <li>人只需：编辑器已刷新、预览已开、已登录能进入口</li>
+                    <li>先环境自检，再抓上行/下行证据</li>
+                    <li>过关：主路径能点，请求发出、回包回来，界面有刷新</li>
+                    <li>缺账号、预览没开或协议没点到：记下来等人处理，不要回头拆前面三步</li>
+                    <li>积分、档位、掉落对不对表，不是这条流水线的结束条件</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>什么时候该停，什么时候可以继续
+              <ul>
+                <li>该停：还没有策划案、文档没写完整、人还没看过界面、主路径没写完、协议还没跑通</li>
+                <li>可以继续：协议还没合、配表还没齐、缺专用图可先占位、人还没登录、数值还没对表。这些先记下来，不要让已经做对的步骤作废</li>
+              </ul>
+            </li>
+            <li>几条不能破的约定
+              <ul>
+                <li>整窗模板要等人点头再拷</li>
+                <li>待确认的问题，不要自己填个默认值接着做</li>
+                <li>界面刚拼完，同一轮里不要接着写脚本</li>
+                <li>前面几段不要等登录、等协议才开始</li>
+                <li>界面能看见，或脚本写完，都不算做完</li>
+                <li>不要把「数值表对上了」当成整条流程的收尾</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <p class="back"><a class="text-link" href="../blog.html"><span class="arrow">←</span> 返回博客</a></p>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>iamchh</span>
+    </div>
+  </footer>
+  <nav class="tabbar" aria-label="底部导航">
+    <a href="../works.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.2"/></svg>作品集</a>
+    <a href="../blog.html" class="is-active"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h7.2L20.5 9.8V20.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5z"/><path d="M14 3.5V9h6"/></svg>博客</a>
+    <a href="../collection.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19.2S4.4 14.1 4.4 9.7A3.7 3.7 0 0 1 12 8.1a3.7 3.7 0 0 1 7.6 1.6C19.6 14.1 12 19.2 12 19.2z"/></svg>收藏</a>
+    <a href="../about.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.2" r="3.1"/><path d="M5.6 19.2c.7-3.2 3.2-5 6.4-5s5.7 1.8 6.4 5"/></svg>关于我</a>
+  </nav>
+  <script src="../js/site.js"></script>
+</body>
+</html>
