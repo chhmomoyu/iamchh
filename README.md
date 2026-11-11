@@ -11,10 +11,15 @@ iamchh 的个人网站。纯静态 HTML / CSS / JS，不需要打包。由 GitHu
 ## 页面
 
 - `index.html` 首页
-- `works.html` 作品集（可按类型筛选）
-- `work.html` 作品详情（示意）
-- `blog.html` 博客列表（示意）
-- `post.html` 文章详情（示意）
-- `collection.html` 收藏（全部 / 文章 / Skill / 工具，可筛选）
-- `about.html` 关于（不使用真实姓名）
-- `placeholder.html` 示意外链占位
+- `about.html` 关于（方向与联系方式，不使用真实姓名）
+- `works.html` 作品集（目前没有可公开的作品）
+- `work.html` 旧作品链接的回退页
+- `blog.html` 博客
+- `notes/browser-hand.html` 浏览器手夹
+- `notes/tla-plus.html` 分支状态与 TLA+
+- `notes/overlay-input.html` Windows 置顶透明悬浮输入框
+- `post.html` 旧文章链接的回退页
+- `collection.html` 收藏：7 篇阅读笔记，以及 58 条 Cursor pstack Skill
+- `notes/` 里其余页面是这 7 篇阅读笔记
+
+联系邮箱写在关于页：3020212110@qq.com。

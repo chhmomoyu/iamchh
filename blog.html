@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>博客 · iamchh</title>
-  <meta name="description" content="iamchh 的个人网站示意原型。游戏前端 / Cocos，也在搜索 AI 辅助开发。">
+  <meta name="description" content="iamchh 正在记录的笔记。">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,37 +40,31 @@
   <main id="main">
     <header class="page-head wrap">
       <h1>博客</h1>
-      <p class="sub">开发笔记与思考（示意）</p>
+      <p class="sub">正在记录的笔记</p>
     </header>
     <div class="wrap">
       <div class="blog-list">
-        <a class="blog-item" href="post.html?id=acceptance-scripts">
-          <div class="blog-item__meta"><span>示意日期 2026-10-18</span><span>笔记</span></div>
-          <h3>用自动化脚本给 Cocos 构建「可执行的验收」</h3>
-          <p>让验收留下可以再次执行的证据，而不只是口头确认功能已经完成。</p>
+        <a class="blog-item" href="notes/browser-hand.html">
+          <div class="blog-item__meta"><span>笔记</span></div>
+          <h3>浏览器手夹——让 AI 验收自己写的功能</h3>
+          <p>希望给浏览器加一层「手夹」，让 AI 能点、看、测自己刚写的功能。还没有落地方案。</p>
         </a>
-        <a class="blog-item" href="post.html?id=hp-bar">
-          <div class="blog-item__meta"><span>示意日期 2026-09-02</span><span>笔记</span></div>
-          <h3>战斗界面里的血条，不只是一条进度条</h3>
-          <p>血条要解决的是战斗中的可读性：变化能不能被立刻看见，又不会干扰判断。</p>
+        <a class="blog-item" href="notes/tla-plus.html">
+          <div class="blog-item__meta"><span>笔记</span></div>
+          <h3>做类似分支状态判断的逻辑时，可以考虑 TLA+</h3>
+          <p>这是学习感悟，不是在项目里验证过的结论。简单的 if/else 不一定需要 TLA+。</p>
         </a>
-        <a class="blog-item" href="post.html?id=ai-workflow">
-          <div class="blog-item__meta"><span>示意日期 2026-08-21</span><span>笔记</span></div>
-          <h3>把 AI 辅助开发嵌进日常工作流的几个原则</h3>
-          <p>把可重复的检查交给模型，把关键判断留在自己手里，并给输出设定范围。</p>
-        </a>
-        <a class="blog-item" href="post.html?id=param-panel">
-          <div class="blog-item__meta"><span>示意日期 2026-07-14</span><span>笔记</span></div>
-          <h3>编辑器小工具：参数面板为什么值得单独做</h3>
-          <p>让数值调整和画面反馈靠得更近，不必每次都回到完整工程里绕一圈。</p>
+        <a class="blog-item" href="notes/overlay-input.html">
+          <div class="blog-item__meta"><span>笔记</span></div>
+          <h3>Windows 置顶透明悬浮输入框（tkinter 提示词）</h3>
+          <p>一条可复用的 tkinter 提示词：置顶无边框，用抠色键做透明。不是已经完成的软件。</p>
         </a>
       </div>
     </div>
   </main>
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <span>iamchh · 界面示意原型</span>
-      <span>内容与项目均为占位，不代表已发布作品</span>
+      <span>iamchh</span>
     </div>
   </footer>
   <nav class="tabbar" aria-label="底部导航">

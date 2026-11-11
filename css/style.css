@@ -1,4 +1,4 @@
-/* iamchh.com — static prototype */
+/* iamchh.com */
 
 @font-face {
   font-family: "Cormorant Garamond";
@@ -820,6 +820,62 @@ body.menu-open .drawer {
   color: var(--text-soft);
   font-size: 1.02rem;
   line-height: 1.85;
+}
+
+
+.article .body h2 {
+  margin: 1.7rem 0 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+}
+
+.article .body h2:first-child {
+  margin-top: 0;
+}
+
+.article .body ul {
+  margin: 0.85rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--text-soft);
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+
+.article .body li + li {
+  margin-top: 0.35rem;
+}
+
+.article .body a {
+  color: var(--gold);
+  overflow-wrap: anywhere;
+}
+
+.article .body a:hover {
+  color: #e0b888;
+}
+
+.article .body pre {
+  margin: 1rem 0 0;
+  padding: 1rem 1.1rem;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--gold-dim);
+  border-radius: var(--radius-sm);
+  color: var(--text-soft);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.84rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.featured .blog-list {
+  padding-bottom: 0;
+}
+
+.collect-item[id] {
+  scroll-margin-top: calc(var(--header-h) + 16px);
 }
 
 .article .back {
